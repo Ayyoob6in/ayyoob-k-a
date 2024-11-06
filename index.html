@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <base href="/aerium/">
+  <meta charset="UTF-8">
+  <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+  <meta name="description" 
+  content="Portfolio website for Ayyoob  Portfolio. This portfolio chowcases his education, skills & expertise, experience, acheivements and hobbies.">
+
+  <!-- iOS meta tags & icons -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="Ayyoob k a">
+  <link rel="apple-touch-icon" href="icons/logo-aerium-2.png">
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" type="image/png" href="icons/logo-aerium-2.png"/>
+
+  <title>Ayyoob</title>
+  <link rel="manifest" href="manifest.json">
+  <script type="application/javascript">
+      function openLink(url, target, isAsync=false) {
+        var is_safari = /^(?!.*chrome).*safari/i.test(navigator.userAgent.toLowerCase());
+        if (is_safari && isAsync) {
+          window.location.href = url;
+        } else {
+          window.open(url, target);
+        }
+      }
+    </script>
+</head>
+<body id="app-container">
+  <!-- This script installs service_worker.js to provide PWA functionality to
+       application. For more information, see:
+       https://developers.google.com/web/fundamentals/primers/service-workers -->
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', function () {
+        navigator.serviceWorker.register('flutter_service_worker.js?v=2755327174');
+      });
+    }
+  </script>
+  <script src="main.dart.js" type="application/javascript"></script>
+  <script type="module">
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-app.js";
+    // TODO: Add SDKs for Firebase products that you want to use
+    // https://firebase.google.com/docs/web/setup#available-libraries
+  
+    // Your web app's Firebase configuration
+    const firebaseConfig = {
+      apiKey: "AIzaSyA1O6si6D8Xgc8XlG8GJLm95UWsr0WHxO4",
+      authDomain: "ayyoob-portfolio-2cd4c.firebaseapp.com",
+      projectId: "ayyoob-portfolio-2cd4c",
+      storageBucket: "ayyoob-portfolio-2cd4c.firebasestorage.app",
+      messagingSenderId: "1039519774741",
+      appId: "1:1039519774741:web:f4beaa739479d16a9b361c"
+    };
+  
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+  </script>
+</body>
+</html>
